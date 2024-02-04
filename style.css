@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #ff4d30;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+section {
+  display: block;
+}
+
+/* Navigation Bar */
+
+nav {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.nav__container {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.nav__image__wrapper {
+  width: 145px;
+}
+
+.nav__image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  transition: 300ms ease;
+}
+
+.nav__link:hover {
+  color: var(--primary);
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__button {
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  padding: 12px 24px;
+  transition: 300ms ease;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+}
+
+.nav__button:hover {
+  box-shadow: 0px 15px 25px 5px rgba(255, 83, 48, 0.35);
+  background-color: red;
+}
+
+.nav__menu {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  display: none;
+  transition: 200ms ease;
+}
+
+.nav__menu:hover {
+  color: var(--primary);
+}
+
+/* Menu */
+
+.menu {
+  position: fixed;
+  background-color: #f8f8f8;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms ease;
+}
+
+.open .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__close {
+  position: absolute;
+  top: 44px;
+  right: 32px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  transition: 200ms ease;
+}
+
+.menu__close:hover {
+  color: var(--primary);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__link {
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  transition: 200ms ease;
+}
+
+.menu__link:hover {
+  color: var(--primary);
+}
+
+/* Header */
+
+header {
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.header__background__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+  z-index: 3;
+  margin-top: 56px;
+}
+
+.header__subtitle {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.header__para {
+  color: gray;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.header__text__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.header__text__button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 30px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.header__text__book {
+  background-color: var(--primary);
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: 300ms ease;
+}
+
+.header__text__book:hover {
+  box-shadow: 0px 15px 25px 5px rgba(255, 83, 48, 0.35);
+  background-color: red;
+}
+
+.header__text__learn {
+  background-color: black;
+  transition: 300ms ease;
+}
+
+.header__text__learn:hover {
+  background-color: white;
+  color: black;
+  border: black;
+  outline: auto;
+}
+
+.header__image__wrapper {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  width: 65%;
+  margin-top: 56px;
+}
+
+.header__car__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Features */
+
+#features {
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.features__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.features__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.features__title {
+  font-size: 42px;
+}
+
+.features__list {
+  display: flex;
+  padding: 0 32px;
+  margin-top: 36px;
+  gap: 56px 160px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.feature__image__wrapper {
+  width: 172px;
+}
+
+.feature__image {
+  width: 100%;
+  height: 100%;
+}
+
+.feature__title {
+  font-size: 24px;
+}
+
+.feature__para {
+  margin-top: 12px;
+  color: gray;
+}
+
+/* Banner */
+
+#banner {
+  background-color: #454545;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+}
+
+.banner__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.banner__title {
+  color: white;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.banner__subtitle {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Choose */
+
+#choose {
+  background-color: white;
+  background-image: url(https://car-rental-html-css.vercel.app/assets/choose-bg.png);
+  background-repeat: no-repeat;
+  background-position: -255px 255px;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.choose__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.choose__image__wrapper {
+  width: 100%;
+}
+
+.choose__image {
+  width: 100%;
+  height: 100%;
+}
+
+.choose__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.choose__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 12px;
+}
+
+.choose__text__subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.choose__text__title {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.choose__text__para {
+  margin-top: 12px;
+  color: gray;
+}
+
+.choose__button {
+  margin-top: 12px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16;
+  font-weight: 700;
+  padding: 18px 30px;
+  width: fit-content;
+  gap: 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: var(--primary);
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: 300ms ease;
+}
+
+.choose__button:hover {
+  box-shadow: 0px 15px 25px 5px rgba(255, 83, 48, 0.35);
+  background-color: red;
+}
+
+.choose__features {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  gap: 32px;
+}
+
+.choose__feature {
+  display: flex;
+  gap: 12px;
+}
+
+.choose__feature__image__wrapper {
+  width: 110px;
+  height: 110px;
+}
+
+.choose__feature__image {
+  width: 110px;
+  height: 110px;
+}
+
+.choose__feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choose__feature__title {
+  font-size: 24px;
+}
+
+.choose__feature__para {
+  font-size: 15px;
+  color: gray;
+}
+
+/* Testimonials */
+
+#testimonials {
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.testimonial__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial__subtitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.testimonial__title {
+  font-size: 42px;
+}
+
+.testimonial__para {
+  color: gray;
+  max-width: 700px;
+  margin-top: 16px;
+}
+
+.testimonial__list {
+  display: flex;
+  margin-top: 80px;
+  gap: 24px;
+}
+
+.testimonial {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 56px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.08);
+}
+
+.testimonial__review {
+  font-size: 22px;
+  text-align: left;
+}
+
+.testimonial__image__wrapper {
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+.testimonial__image {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial__info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial__profile {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.testimonial__name {
+  font-size: 18px;
+}
+
+.testimonial__location {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.testimonial__icon {
+  color: var(--primary);
+  font-size: 48px;
+  margin-left: auto;
+}
+
+/* Downloads */
+
+#downloads {
+  background-image: url(https://car-rental-html-css.vercel.app/assets/download-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.downloads__row {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.downloads__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  gap: 20px;
+}
+
+.downloads__title {
+  font-size: 42px;
+}
+
+.downloads__para {
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.downloads__content__links {
+  display: flex;
+  gap: 24px;
+}
+
+.downloads__text__link {
+  width: 40%;
+}
+
+.downloads__text__link__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: space-between;
+}
+
+.footer__intro {
+  width: 25%;
+}
+
+.footer__intro__title {
+  font-size: 24px;
+}
+
+.footer__intro__para {
+  color: gray;
+  margin: 16px 0;
+}
+
+.footer__intro__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__intro__link {
+  color: black;
+  transition: 300ms ease;
+  width: fit-content;
+}
+
+.footer__intro__link:hover {
+  color: var(--primary);
+}
+
+.footer__company__title {
+  font-size: 24px;
+}
+
+.footer__company__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.footer__company__link {
+  color: black;
+  transition: 300ms ease;
+  width: fit-content;
+}
+
+.footer__company__link:hover {
+  color: var(--primary);
+}
+
+.footer__hours__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer__hours__time {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__subscribe__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer__subscribe__para {
+  max-width: 250px;
+}
+
+.footer__subscribe__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer__subscribe__form__input {
+  padding: 12px;
+  background-color: #f8f8f8;
+  border: none;
+  outline: none;
+}
+
+.footer__subscribe__input__button {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  transition: 300ms ease;
+}
+
+.footer__subscribe__input__button:hover {
+  box-shadow: 0px 15px 25px 5px rgba(255, 83, 48, 0.35);
+  background-color: red;
+}
+
+/* 1280px */
+
+@media (max-width: 1280px) {
+  .footer__content {
+    width: 40%;
+  }
+}
+
+/* 1024px */
+
+@media (max-width: 1024px) {
+  /* Navigation */
+  .nav__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__buttons {
+    display: none;
+  }
+
+  /* Header */
+
+  .header__para {
+    width: 320px;
+  }
+
+  /* Features */
+
+  .features__list {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .feature {
+    width: 45%;
+  }
+
+  /* Choose */
+
+  .choose__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .choose__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .choose__text {
+    align-items: center;
+  }
+
+  .choose__features {
+    gap: 40px;
+  }
+
+  /* Testimonials */
+
+  .testimonial__list {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+/* 768px */
+
+@media (max-width: 768px) {
+  /* Header */
+
+  .header__background__image {
+    display: none;
+  }
+
+  .header__car__image {
+    display: none;
+  }
+
+  .header__row {
+    justify-content: center;
+  }
+
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__para {
+    width: 500px;
+  }
+
+  /* Features */
+
+  .feature {
+    width: 100%;
+  }
+
+  /* Banner */
+
+  .banner__title{
+    text-align: center;
+  }
+
+  /* Downloads */
+
+  #downloads{
+    background-image: none;
+  }
+
+ .downloads__row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .downloads__content{
+  display: flex;
+  align-items: center;
+  text-align: center;
+ }
+
+ .downloads__content__links{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+ }
+}
+ 
+/* 640px */
+
+ @media (max-width: 640px){
+  .footer__row{
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__company__links{
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__intro__links{
+    align-items: center;
+  }
+
+  .footer__intro{
+    width: 100%;
+  }
+
+ 
+ }
